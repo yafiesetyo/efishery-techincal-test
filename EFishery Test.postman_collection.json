@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "258705ce-417a-473a-bc53-b341d43fdec4",
+		"name": "EFishery Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7171129"
+	},
+	"item": [
+		{
+			"name": "Auth Service",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"joko\",\n    \"phone\":\"081441414132\",\n    \"role\":\"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\":\"081441414132\",\n    \"password\":\"tqkq\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Claims",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/users/claims",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"claims"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fetch Service",
+			"item": [
+				{
+					"name": "Aggregate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_fetch}}/api/v1/list/aggregate",
+							"host": [
+								"{{url_fetch}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"list",
+								"aggregate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_fetch}}/api/v1/list",
+							"host": [
+								"{{url_fetch}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "support",
+			"item": [
+				{
+					"name": "Get List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://stein.efishery.com/v1/storages/5e1edf521073e315924ceab4/list",
+							"protocol": "https",
+							"host": [
+								"stein",
+								"efishery",
+								"com"
+							],
+							"path": [
+								"v1",
+								"storages",
+								"5e1edf521073e315924ceab4",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Currency",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "1VERjXZssGoP4eg8zvincW4Mm4EuY7kS",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.apilayer.com/fixer/latest?base=USD&symbols=IDR",
+							"protocol": "https",
+							"host": [
+								"api",
+								"apilayer",
+								"com"
+							],
+							"path": [
+								"fixer",
+								"latest"
+							],
+							"query": [
+								{
+									"key": "base",
+									"value": "USD"
+								},
+								{
+									"key": "date",
+									"value": "2018-01-01",
+									"disabled": true
+								},
+								{
+									"key": "symbols",
+									"value": "IDR"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVkX2F0IjoiMjAyMy0wMy0wNyAxNDoyNTozMi42NzIzNzcgKzA3MDAgV0lCIG09KzExLjM2NzYxNzcwOSIsImV4cCI6NTQyNDg2NjYwOSwibmFtZSI6Impva28iLCJwaG9uZSI6IjA4MTQ0MTQxNDEzMiIsInJvbGUiOiJhZG1pbiJ9.O7kbpcjEu3QwJFNJSqFUbc3frseleWMbOx2SuWyObLs",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
