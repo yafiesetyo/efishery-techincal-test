@@ -12,7 +12,7 @@ There's two services:
 run `docker-compose up` and app will serve on ports:
 
 1. auth-srv : 8999
-2. fetch-srv: 8999
+2. fetch-srv: 8998
 
 ### DOCS
 for the API Docs is on this repo, with filename 
