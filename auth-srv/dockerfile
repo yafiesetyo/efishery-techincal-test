@@ -1,0 +1,18 @@
+FROM golang:1.19-alpine
+
+RUN apk add --no-cache git
+
+WORKDIR /app/auth-srv
+
+COPY ./go.mod .
+COPY ./go.sum .
+
+RUN go mod tidy
+
+COPY ../. .
+
+RUN go build -o ./out/auth-srv .
+
+EXPOSE 8999
+
+CMD [ "./out/auth-srv" ]

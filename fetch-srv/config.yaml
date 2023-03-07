@@ -1,0 +1,6 @@
+env: dev
+port: 8998
+fixerApiKey: 1VERjXZssGoP4eg8zvincW4Mm4EuY7kS
+jwt:
+  secret: secretBanget
+  accessTokenExp: 24h

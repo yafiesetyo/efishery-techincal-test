@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  fetch-service:
+    build: ./fetch-srv
+    ports:
+      - "8998:8998"
+    restart: on-failure
+  auth-service:
+    build: ./auth-srv
+    ports:
+      - "8999:8999"
+    restart: on-failure
